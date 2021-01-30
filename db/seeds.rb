@@ -4,7 +4,7 @@ print "Creating Users... "
 u1 = User.create!(
 name: 'Jane Doe',
 email: 'jane@jane.com',
-password:  'chicken',
+password_digest:  'chicken',
 dog_name: 'Huey',
 dog_breed: 'Labrador',
 vaccinated: 'true',
