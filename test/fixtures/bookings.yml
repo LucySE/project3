@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  park_id: 1
+  booking_start_date: 2021-01-30 19:00:54
+  booking_end_date: 2021-01-30 19:00:54
+  report_card: MyText
+  photo: MyText
+
+two:
+  user_id: 1
+  park_id: 1
+  booking_start_date: 2021-01-30 19:00:54
+  booking_end_date: 2021-01-30 19:00:54
+  report_card: MyText
+  photo: MyText

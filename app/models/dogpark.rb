@@ -1,0 +1,2 @@
+class Dogpark < ApplicationRecord
+end
