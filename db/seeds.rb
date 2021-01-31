@@ -32,5 +32,6 @@ user_id: u1.id,
 dogpark_id: p1.id,
 booking_start_date: '2021-02-06 10:00',
 booking_end_date: '2021-02-06 11:00',
-report_card: 'A very good boy'
+report_card: 'A very good boy',
+photo: 'https://unsplash.com/photos/vI-5_EIhQLU'
 )
