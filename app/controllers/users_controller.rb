@@ -1,17 +1,51 @@
 class UsersController < ApplicationController
+before_action :fetch_user
+  def new
+      @user= User.new #make a blank user object to give to 'form_width'
+    end
 
-#   before_action :fetch_user
-#
-#
-# def fetch_user
-#   #check if the user_id in the session hash is the ID of the real user in our tables
-#
-# if session[:user_id].present?
-#   @current_user = User.find_by id: session[:user_id]
-# end
-#
-#   #if we did get nil from user id above delete the session (because the user_id is invalid)
-#   session[:user_id] = nil unless @current_user.present?
-# end # fetch user
 
-end
+
+  def search
+
+  end
+
+    def create
+    @user = User.create user_params
+
+  #did the above create? actually save to the database or now
+  if @user.persisted?
+
+  session[:user_id] = @user.id
+  redirect_to root_path
+
+  else
+  render :new
+    end
+
+  end
+
+
+    def index
+    @users= User.all
+
+    end
+
+    def show
+        @user = User.find params[:id]
+    end
+
+    def edit
+    end
+
+    def update
+    end
+
+    def destroy
+    end
+
+    private
+    def user_params
+      params.require(:user).permit(:email, :password, :password_confirmation, :username)
+    end
+  end

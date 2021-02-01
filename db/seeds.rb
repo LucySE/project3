@@ -21,7 +21,8 @@ Dogpark.destroy_all
 p1 = Dogpark.create!(
 capacity: '6',
 latitude: '-33.9068',
-longitude: '151.171858'
+longitude: '151.171858',
+dogpark_name: 'Marrickville Metro'
 )
 
 print "Creating bookings... "

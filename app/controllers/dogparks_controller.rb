@@ -1,13 +1,3 @@
 class DogparksController < ApplicationController
-  def index
-  end
 
-  def show
-  end
-
-  def new
-  end
-
-  def edit
-  end
-end
+  skip_before_action :verify_authenticity_token, raise: false
