@@ -12,21 +12,9 @@ delete '/login' => 'session#destroy'
 
 #create all 7 crud routes for the user model
 resources :users
-  # get 'session/new'
-  # get 'bookings/index'
-  # get 'bookings/show'
-  # get 'bookings/new'
-  # get 'bookings/edit'
-  # get 'dogparks/index'
-  # get 'dogparks/show'
-  # get 'dogparks/new'
-  # get 'dogparks/edit'
-  # get 'users/index'
-  # get 'users/show'
-  # get 'users/new'
-  # get 'users/edit'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-resources:dogparks
-resources:bookings
+resources :dogparks
+get '/search' => 'dogparks#search'
+
+resources :bookings
 end

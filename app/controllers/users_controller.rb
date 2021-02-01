@@ -6,9 +6,7 @@ before_action :fetch_user
 
 
 
-  def search
-
-  end
+  
 
     def create
     @user = User.create user_params

@@ -6,7 +6,7 @@ User.destroy_all
 u1 = User.create!(
 name: 'Jane Doe',
 email: 'jane@jane.com',
-password_digest: 'chicken',
+password: 'chicken',
 dog_name: 'Huey',
 dog_breed: 'Labrador',
 vaccinated: 'true',
@@ -17,7 +17,7 @@ username: "labradore"
 u2 = User.create!(
 name: 'Joe Bloggs',
 email: 'joe@joe.com',
-password_digest: 'chicken',
+password: 'chicken',
 dog_name: 'Bingo',
 dog_breed: 'Poodle',
 vaccinated: 'true',
@@ -28,7 +28,7 @@ username: "bingo123"
 u3 = User.create!(
 name: 'Bonnie Scott',
 email: 'bill@bill.com',
-password_digest: 'chicken',
+password: 'chicken',
 dog_name: 'Fido',
 dog_breed: 'West Highland White Terrier',
 vaccinated: 'true',
@@ -39,7 +39,7 @@ username: "Westies4eva"
 u4 = User.create!(
 name: 'Harry Sharp',
 email: 'harry@harry.com',
-password_digest: 'chicken',
+password: 'chicken',
 dog_name: 'Trevor',
 dog_breed: 'Husky',
 vaccinated: 'true',
