@@ -18,7 +18,7 @@ class DogparksController < ApplicationController
       units: :km
     )
     #if not radius not specified, params radius returns nil
-    #||Because we have 5, if the radius is empty, it will default to the 5 because of the logic of the || "or" expression. "or" will always evaluate to the truthy thing. 
+    #||Because we have 5, if the radius is empty, it will default to the 5 because of the logic of the || "or" expression. "or" will always evaluate to the truthy thing.
     render json: dogpark.to_json
   end
 end #end of class

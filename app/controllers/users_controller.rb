@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
-before_action :authenticate_user
+
   def new
       @user= User.new #make a blank user object to give to 'form_width'
     end
 
 
 
-  
+
 
     def create
     @user = User.create user_params
