@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
 
+  before_action :authenticate_user
+  def current
+     render json: current_user
+   end
+
+  end
+
+
   def new
       @user= User.new #make a blank user object to give to 'form_width'
     end

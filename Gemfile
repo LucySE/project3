@@ -69,3 +69,5 @@ gem 'jquery-rails'
 gem "rack-cors", "~> 1.1"
 
 gem 'knock'
+
+gem 'jwt'

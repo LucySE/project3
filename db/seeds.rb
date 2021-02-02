@@ -47,6 +47,9 @@ vet: 'Pack of dogs',
 vaccination_certificate: "https://res.cloudinary.com/do9y9tnbr/image/upload/v1612003377/dogpark_vaccinations/Hueysvaccinations_mncxki.pdf",
 username: "Cairns"
 )
+
+puts "Created #{ User.count } users:"
+
 print "Creating dogparks... "
 
 Dogpark.destroy_all

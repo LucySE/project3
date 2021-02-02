@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+post 'user_token' => 'user_token#create'
+
+post 'user/token' => 'user_token#create'
+get 'users/current' => 'users#current'
+
 
 
 # redirects you when you login
