@@ -65,3 +65,7 @@ gem "geocoder", "~> 1.6"
 
 # add Jquery
 gem 'jquery-rails'
+
+gem "rack-cors", "~> 1.1"
+
+gem 'knock'

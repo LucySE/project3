@@ -8,7 +8,7 @@ class SessionController < ApplicationController
   user = User.find_by email: params[:email]
 
 #did we find a user for that email address? (was it nill)
-if user.present?
+if current_user
  #credentials were correct - login successful!
 
 session[:user_id] = user.id

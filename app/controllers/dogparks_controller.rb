@@ -3,22 +3,22 @@ class DogparksController < ApplicationController
   skip_before_action :verify_authenticity_token, raise: false
 
   def index
-
-    render json: Dogpark.all
-
-  end # end of index
-
-  def search
-    render json: params
+    dogparks = Dogpark.all
+    render json: dogparks.to_json
   end
-  def show
-
-    @dogpark = dogpark.find(params[:id])
-
-  end # end of class
-private
-  def dogpark_params
-    params.require(:dogpark).permit(:dogpark_name, :latitude, :longitude, :postal_code)
-  end # end of private
-
-end
+  # def create
+  #   dogpark = dogpark.create dogpark_params
+  #
+  #   redirect_to dogpark_path(dogpark.id)
+  # end
+  def search
+    dogpark = Dogpark.near(
+      params[:postcode] + ', NSW Australia',
+      params[:radius] || 10,
+      units: :km
+    )
+    #if not radius not specified, params radius returns nil
+    #||Because we have 5, if the radius is empty, it will default to the 5 because of the logic of the || "or" expression. "or" will always evaluate to the truthy thing. 
+    render json: dogpark.to_json
+  end
+end #end of class
