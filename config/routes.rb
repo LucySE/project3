@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-post 'user_token' => 'user_token#create'
+post '/user_token' => 'user_token#create'
 
-post 'user/token' => 'user_token#create'
-get 'users/current' => 'users#current'
+post '/user/token' => 'user_token#create'
+get '/users/current' => 'users#current'
 
 
 
 # redirects you when you login
-root to: 'pages#home'
+
 #Login/logout routes
 
 #show login form
