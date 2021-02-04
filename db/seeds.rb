@@ -91,6 +91,17 @@ vet: 'Pack of dogs',
 vaccination_certificate: "https://res.cloudinary.com/do9y9tnbr/image/upload/v1612003377/dogpark_vaccinations/Hueysvaccinations_mncxki.pdf",
 username: "BeckyN"
 )
+u9 = User.create!(
+name: 'Lucy',
+email: 'Lucy@lucy.com',
+password: 'chicken',
+dog_name: 'Bonnie Scot-Wirth',
+dog_breed: 'West Highland White Terrier',
+vaccinated: 'true',
+vet: 'AMS',
+vaccination_certificate: "https://res.cloudinary.com/do9y9tnbr/image/upload/v1612003377/dogpark_vaccinations/Hueysvaccinations_mncxki.pdf",
+username: "Lucy"
+)
 
 puts "Created #{ User.count } users:"
 
@@ -143,12 +154,12 @@ print "Creating bookings... "
 Booking.destroy_all
 
 b1 = Booking.create!(
-user_id: u1.id,
+user_id: u9.id,
 dogpark_id: p4.id,
 booking_start_date: '2021-02-06 10:00',
 booking_end_date: '2021-02-06 11:00',
 report_card: 'A very good boy',
-photo: 'https://unsplash.com/photos/vI-5_EIhQLU'
+photo: 'https://res.cloudinary.com/do9y9tnbr/image/upload/v1612411824/tuva-mathilde-loland-vI-5_EIhQLU-unsplash_qtaeq8.jpg'
 )
 b2 = Booking.create!(
 user_id: u2.id,
@@ -204,7 +215,7 @@ dogpark_id: p2.id,
 booking_start_date: '2021-02-06 10:00',
 booking_end_date: '2021-02-06 11:00',
 report_card: 'banned',
-photo: 'https://unsplash.com/photos/NzdjuGxj_18'
+photo: 'https://res.cloudinary.com/do9y9tnbr/image/upload/v1612432344/gabe-rebra-NzdjuGxj_18-unsplash_hxkvqb.jpg'
 )
 b9 = Booking.create!(
 user_id: u8.id,
@@ -212,5 +223,5 @@ dogpark_id: p3.id,
 booking_start_date: '2021-02-06 12:00',
 booking_end_date: '2021-02-06 13:00',
 report_card: 'banned',
-photo: 'https://unsplash.com/photos/NzdjuGxj_18'
+photo: 'https://res.cloudinary.com/do9y9tnbr/image/upload/v1612432344/gabe-rebra-NzdjuGxj_18-unsplash_hxkvqb.jpg'
 )

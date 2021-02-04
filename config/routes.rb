@@ -19,7 +19,7 @@ delete '/login' => 'session#destroy'
 #create all 7 crud routes for the user model
 resources :users
 
-
+post '/dogparks/:id/book' => 'dogparks#create_booking'
 get '/search' => 'dogparks#search'
 resources :dogparks
 resources :bookings
