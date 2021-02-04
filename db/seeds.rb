@@ -214,11 +214,11 @@ user_id: u8.id,
 dogpark_id: p2.id,
 booking_start_date: '2021-02-06 10:00',
 booking_end_date: '2021-02-06 11:00',
-report_card: 'banned',
-photo: 'https://res.cloudinary.com/do9y9tnbr/image/upload/v1612432344/gabe-rebra-NzdjuGxj_18-unsplash_hxkvqb.jpg'
+report_card: 'lovely girl',
+photo: 'https://res.cloudinary.com/do9y9tnbr/image/upload/v1612411824/tuva-mathilde-loland-vI-5_EIhQLU-unsplash_qtaeq8.jpg'
 )
 b9 = Booking.create!(
-user_id: u8.id,
+user_id: u4.id,
 dogpark_id: p3.id,
 booking_start_date: '2021-02-06 12:00',
 booking_end_date: '2021-02-06 13:00',
