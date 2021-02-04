@@ -15,7 +15,9 @@ class DogparksController < ApplicationController
     dogpark = Dogpark.near(
       params[:postcode] + ', NSW Australia',
       params[:radius] || 10,
-      units: :km
+      units: :km,
+      params[:booking_start_date],
+      params[:booking_end_date]
     )
     #if not radius not specified, params radius returns nil
     #||Because we have 5, if the radius is empty, it will default to the 5 because of the logic of the || "or" expression. "or" will always evaluate to the truthy thing.

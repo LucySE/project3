@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user, except: [:new, :create]
 
   def current
-     render json: current_user
+     render json: current_user, include: [:bookings]
   end
 
 

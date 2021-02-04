@@ -47,6 +47,50 @@ vet: 'Pack of dogs',
 vaccination_certificate: "https://res.cloudinary.com/do9y9tnbr/image/upload/v1612003377/dogpark_vaccinations/Hueysvaccinations_mncxki.pdf",
 username: "Cairns"
 )
+u5 = User.create!(
+name: 'James Coogan',
+email: 'james@james.com',
+password: 'chicken',
+dog_name: 'Alan',
+dog_breed: 'Border Collie',
+vaccinated: 'true',
+vet: 'all the dogs',
+vaccination_certificate: "https://res.cloudinary.com/do9y9tnbr/image/upload/v1612003377/dogpark_vaccinations/Hueysvaccinations_mncxki.pdf",
+username: "coogans"
+)
+u6 = User.create!(
+name: 'Bilbo Baggins',
+email: 'bilbo@bilbo.com',
+password: 'chicken',
+dog_name: 'Gandalf',
+dog_breed: 'Pomeranian',
+vaccinated: 'true',
+vet: 'Pack of dogs',
+vaccination_certificate: "https://res.cloudinary.com/do9y9tnbr/image/upload/v1612003377/dogpark_vaccinations/Hueysvaccinations_mncxki.pdf",
+username: "Pommie"
+)
+u7 = User.create!(
+name: 'Leonard Cohen',
+email: 'leonard@leonard.com',
+password: 'chicken',
+dog_name: 'Lennys',
+dog_breed: 'Pug',
+vaccinated: 'true',
+vet: 'Pack of dogs',
+vaccination_certificate: "https://res.cloudinary.com/do9y9tnbr/image/upload/v1612003377/dogpark_vaccinations/Hueysvaccinations_mncxki.pdf",
+username: "Puggy"
+)
+u8 = User.create!(
+name: 'Becky Nova',
+email: 'becky@becky.com',
+password: 'chicken',
+dog_name: 'planet',
+dog_breed: 'Doberman',
+vaccinated: 'true',
+vet: 'Pack of dogs',
+vaccination_certificate: "https://res.cloudinary.com/do9y9tnbr/image/upload/v1612003377/dogpark_vaccinations/Hueysvaccinations_mncxki.pdf",
+username: "BeckyN"
+)
 
 puts "Created #{ User.count } users:"
 
@@ -100,7 +144,7 @@ Booking.destroy_all
 
 b1 = Booking.create!(
 user_id: u1.id,
-dogpark_id: p1.id,
+dogpark_id: p4.id,
 booking_start_date: '2021-02-06 10:00',
 booking_end_date: '2021-02-06 11:00',
 report_card: 'A very good boy',
@@ -108,7 +152,7 @@ photo: 'https://unsplash.com/photos/vI-5_EIhQLU'
 )
 b2 = Booking.create!(
 user_id: u2.id,
-dogpark_id: p2.id,
+dogpark_id: p4.id,
 booking_start_date: '2021-02-06 10:00',
 booking_end_date: '2021-02-06 11:00',
 report_card: 'naughty',
@@ -116,7 +160,7 @@ photo: 'https://unsplash.com/photos/tGBRQw52Thw'
 )
 b3 = Booking.create!(
 user_id: u3.id,
-dogpark_id: p3.id,
+dogpark_id: p4.id,
 booking_start_date: '2021-02-06 10:00',
 booking_end_date: '2021-02-06 11:00',
 report_card: 'ok',
@@ -127,6 +171,46 @@ user_id: u4.id,
 dogpark_id: p4.id,
 booking_start_date: '2021-02-06 10:00',
 booking_end_date: '2021-02-06 11:00',
+report_card: 'banned',
+photo: 'https://unsplash.com/photos/NzdjuGxj_18'
+)
+b5 = Booking.create!(
+user_id: u5.id,
+dogpark_id: p4.id,
+booking_start_date: '2021-02-06 10:00',
+booking_end_date: '2021-02-06 11:00',
+report_card: 'banned',
+photo: 'https://unsplash.com/photos/NzdjuGxj_18'
+)
+b6 = Booking.create!(
+user_id: u6.id,
+dogpark_id: p4.id,
+booking_start_date: '2021-02-06 10:00',
+booking_end_date: '2021-02-06 11:00',
+report_card: 'banned',
+photo: 'https://unsplash.com/photos/NzdjuGxj_18'
+)
+b7 = Booking.create!(
+user_id: u7.id,
+dogpark_id: p2.id,
+booking_start_date: '2021-02-06 10:00',
+booking_end_date: '2021-02-06 11:00',
+report_card: 'banned',
+photo: 'https://unsplash.com/photos/NzdjuGxj_18'
+)
+b8 = Booking.create!(
+user_id: u8.id,
+dogpark_id: p2.id,
+booking_start_date: '2021-02-06 10:00',
+booking_end_date: '2021-02-06 11:00',
+report_card: 'banned',
+photo: 'https://unsplash.com/photos/NzdjuGxj_18'
+)
+b9 = Booking.create!(
+user_id: u8.id,
+dogpark_id: p3.id,
+booking_start_date: '2021-02-06 12:00',
+booking_end_date: '2021-02-06 13:00',
 report_card: 'banned',
 photo: 'https://unsplash.com/photos/NzdjuGxj_18'
 )
